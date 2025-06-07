@@ -1,15 +1,15 @@
 {
-  version 2,
-  builds [
+  "version": 2,
+  "builds": [
     {
-      src apiindex.py,
-      use @vercelpython
+      "src": "api/index.py",
+      "use": "@vercel/python"
     }
   ],
-  routes [
+  "routes": [
     {
-      src api(.),
-      dest apiindex.py
+      "src": "/api/(.*)",
+      "dest": "api/index.py"
     }
   ]
 }
